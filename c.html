@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodoshi's Special Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Dancing+Script:wght@400..700&family=Freckle+Face&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            font-family: Cute Font;
+            background-color: #ffe6f2;
+            transition: background-color 0.5s ease-in-out;
+        }
+        h1 {
+            color: #d63384;
+            margin-top: 50px;
+            font-size: 70px;
+        }
+        .s{
+            color:#ff003c;
+            margin-top: 80px;
+            font-size: 66px;
+        }
+        .w{
+            color: #d63384;
+            margin-top: 90px;
+            font-size: 70px;
+        }
+        .play-button{
+            padding: 15px 30px;
+            font-size: 29px;
+            font-weight: bold;
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: Cute Font;
+        }
+        .play-button:hover{
+            background-color: #ff4d79;
+        }
+        .text-area {
+            margin-top: 200px;
+            transition: margin-top 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hiiiiiii Rodoshi! 💗💗</h1>
+    <button class="play-button" onclick="playMusic()">You love CAS songs right? Click !</button>
+
+    <h1 class="s">I love you soo muchhhh:DD</h1>
+    <h1 class="w">Mwaaaaaaaaaaaaaaa</h1>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audioPlayer" preload="auto">
+        <source src="https://drive.google.com/uc?export=download&id=1rG70XAAwThuYHxz9QwKmTmZIpbL3N69Z" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play(); // This will play the music when the button is clicked
+            window.alert("Now playing Sunsetz - Cigarettes After Sex <33 :DD");
+            document.body.style.backgroundColor = "black";
+            
+            // Smooth scroll to the text area
+            const textArea = document.getElementById('textArea');
+            textArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+    </script>
+</body>
+</html>
